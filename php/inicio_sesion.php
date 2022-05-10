@@ -1,9 +1,8 @@
 <?php
     session_start();
-    $email=$_POST['email'];
-    $contraseña=$_POST['contraseña'];
-
     include('coneccion.php');
+    $email=@mysqli_real_escape_string($conect,$_POST['email']);
+    $contraseña=@mysqli_real_escape_string($conect,$_POST['contraseña']);
     $consulta="SELECT * FROM `usuarios`";
     $query=@mysqli_query($conect,$consulta);
         while($datos=@mysqli_fetch_array($query)){
@@ -16,7 +15,7 @@
             $datos['telefono'];
             $datos['id_localidad'];
             $datos['user_email'];
-                if($email==$datos['user_email'] && $contraseña==$datos['contraseña']){
+                if($email===$datos['user_email'] && $contraseña===$datos['contraseña']){
                 $_SESSION['id_usuario']=$datos['id_usuario'];
                 $_SESSION['nombre_usuario']=$datos['nombre_usuario'];
                 $_SESSION['contraseña']=$datos['contraseña'];
@@ -33,5 +32,5 @@
                 }
                 }
                 }
-            echo "LO SENTIMOS, PERO TU CONTRASEÑA O EMAIL ES INCORRECTO"
+                echo "LO SENTIMOS, LA CONTRASEÑA O CORREO ES INCORRECTO";
         ?>

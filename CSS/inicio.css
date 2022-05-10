@@ -1,11 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background-image: url('/images/relax-on-beach-600w-179137265.webp');
+    background-size: cover;
 }
-
 .inicio-sesion{
-    border: #0274a8 solid 1px;
+    background:rgb(240, 245, 245);
+    backdrop-filter: blur(70px);
+    border: #4d4e4e solid 1px;
     border-radius: 5px;
     height: 100%;
     width: 400px;
@@ -13,6 +13,7 @@
     left: 500px;
     top: 100px;
     padding: 50px 10px 0px 10px;
+    display:none;
 }
 .inicio-sesion input{
     display: inline-block;
@@ -20,9 +21,24 @@
     padding: 10px;
     margin-top: 15px;
 }
-.inicio-sesion button{
+#email{
+    width: 100%;  
+}
+#boton_inicio{
     margin:20px 0 20px 150px; 
-    padding: 6px 10px 6px 10px;
+    padding: 12px 20px 12px 20px;
+    background-color:#fc5c34 ;
+    color:#fdf5cf;
+    border:none;
+    position:relative;
+}
+#boton_inicio:hover{
+    background: linear-gradient(to top, #fc5c34,#ffb133);
+    right:60px;
+    width: 200px;
+    transition: width .5s;
+    font-weight: 900;
+    font-size: 20px;
 }
 .inicio-sesion h1{
     text-align: center;

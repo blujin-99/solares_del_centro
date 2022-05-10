@@ -1,5 +1,5 @@
     function validar(){
-    var nombre,apellido, email,contraseña,tel,expresion,exp2;
+    let nombre,apellido, email,contraseña,tel,expresion,exp2;
     
     nombre=document.getElementById('nombre').value;
     apellido=document.getElementById('apellido').value;
@@ -15,7 +15,7 @@
             }
 
         if(!exp2.test(nombre)){
-                alert("Ingrese solamente letras");
+                alert("Ingrese solamente letras en su nombre");
                 return false;
                 }else{
 
@@ -26,7 +26,7 @@
             }
 
         if(!exp2.test(apellido)){
-                alert("Ingrese solamente letras");
+                alert("Ingrese solamente letras en su apellido");
                 return false;
                 }else{
 
@@ -37,12 +37,12 @@
             }
 
         if(!expresion.test(contraseña)){
-                alert("Ingrese solo número y letras");
+                alert("Ingrese solo número y letras en su contraseña");
                 return false;
                 }else{
 
                 if(contraseña.length>20){
-                alert("Ingrese una cantidad de 20 o menos de caracteres");
+                alert("Ingrese una cantidad mínima de 8 caracteres y máxima de 20. Utilice al menos una Mayúscula y al menos un número");
                 return false;
             }
         }

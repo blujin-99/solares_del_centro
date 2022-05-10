@@ -1,0 +1,105 @@
+.cuerpo{
+    background: linear-gradient(to right, #fc5c34,#ffb133,#fcff55);
+}
+/* -----------BARRA DE NAVEGACIÓN*/
+.barra_nav{
+background-color: #252424;
+height: 50px;
+width: 100%;
+}
+.ir_inicio{
+    list-style:none;
+    margin:0;
+}
+.ir_inicio li{
+    float: left;
+    margin:0;
+}
+#direc_inicio{
+    background-color: #252424;
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 16px;
+}
+#direc_inicio:hover{
+    background: linear-gradient(to right, #fc5c34,#ffb133,#fcff55);
+    border: 1px solid black;
+}
+#direc_inicio_sesion{
+    background-color: #252424;
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 16px;
+    border:none;
+}
+#direc_inicio_sesion:hover{
+    background: linear-gradient(to right, #fc5c34,#ffb133,#fcff55);
+    border: 1px solid black;
+}
+
+/* -----------FORMULARIO DE REGISTRO*/
+.form_registro{
+    max-width: 600px;
+    height: 100%;
+    padding: 100px 25px 60px 20px;
+    position:relative;
+    left:50px;
+    box-shadow: #747373 0 8px 15px ;
+    margin-top:50px;
+    margin-bottom: 50px;
+    background-color: #fff;
+}
+#crear_cuenta{
+    color:#fc5c34 ;
+    text-align:center;
+    font-weight: 300;
+    font-size:xx-large;
+}
+.form_registro input{
+    display:inline-block;
+    width: 100%;
+    height: 30px;
+    margin-top:40px;
+    background-color: #f0f8ff;
+}
+.form_registro input:focus{
+    outline: solid #fc5c34 2px;
+}
+#email{
+width:70%;
+margin-right: 10px;
+}
+
+.select_dominio{
+    width:150px;
+    height: 30px;
+    background-color:#fc5c34 ;
+    color:#fdf5cf;
+    border:none;
+}
+
+.boton_registrarse{
+    width:200px;
+    height: 40px;
+    position:relative;
+    left:180px;
+    top:30px;
+    background-color:#fc5c34 ;
+    color:#fdf5cf;
+    border:none;
+}
+
+.boton_registrarse:hover{
+    background: linear-gradient(to top, #fc5c34,#ffb133);
+    left:130px;
+    width: 300px;
+    transition: width .5s;
+    font-weight: 900;
+    font-size: 20px;
+}
