@@ -1,15 +1,15 @@
     function validar(){
-    let nombre,apellido, email,contraseña,tel,expresion,exp2;
+    let nombre,apellido,usuario,email,contraseña,tel,expresion,exp2;
     
     nombre=document.getElementById('nombre').value;
     apellido=document.getElementById('apellido').value;
+    usuario=document.getElementById('usuario').value;
     email=document.getElementById('email').value;
     contraseña=document.getElementById('contraseña').value;
     tel=document.getElementById('tel').value;
-    expresion= new RegExp("^[a-zA-Z0-9]+$");
-    exp2= new RegExp("^[a-zA-Z0-9]+$");
-        
-        if(nombre === "" || apellido ==="" || email==="" || contraseña==="" || tel==="" ){
+    expresion= new RegExp("^[a-zA-Z0-9ñÑ.]+$");
+    exp2= new RegExp("^[a-zA-ZñÑ]+$");
+        if(nombre === "" || apellido ==="" || usuario==="" || email==="" || contraseña==="" || tel==="" ){
                 alert("Debes completar todos los campos");
                 return false;
             }
@@ -29,12 +29,21 @@
                 alert("Ingrese solamente letras en su apellido");
                 return false;
                 }else{
-
                 if(apellido.length>30){
                 alert("El apellido es muy largo");
                 return false;
                 }
             }
+        
+        if(!expresion.test(usuario)){
+                alert("Ingresa unicamente letras y números en su nombre de usuario");
+                return false;
+        }else{
+                if(usuario.length > 20){
+                alert("Ingrese un cantidad de 20 de caracteres");
+                return false;
+                }
+        }
 
         if(!expresion.test(contraseña)){
                 alert("Ingrese solo número y letras en su contraseña");
@@ -52,7 +61,7 @@
                 return false;
             }
 
-        if(isNaN(tel)){
+                if(isNaN(tel)){
                 alert("Ingrese solamente números");
                 return false;
             }
@@ -65,7 +74,6 @@
                 if(email.length>30){
                 alert("Ingrese una dirección de correo más corta");
                 return false;
-
                 }
             }
 }

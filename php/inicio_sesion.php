@@ -15,7 +15,7 @@
             $datos['telefono'];
             $datos['id_localidad'];
             $datos['user_email'];
-                if($email===$datos['user_email'] && $contraseña===$datos['contraseña']){
+                if($email===$datos['user_email'] && password_verify($contraseña,$datos['contraseña'])){
                 $_SESSION['id_usuario']=$datos['id_usuario'];
                 $_SESSION['nombre_usuario']=$datos['nombre_usuario'];
                 $_SESSION['contraseña']=$datos['contraseña'];

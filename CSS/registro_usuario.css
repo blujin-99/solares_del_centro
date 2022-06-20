@@ -3,7 +3,7 @@
 }
 /* -----------BARRA DE NAVEGACIÓN*/
 .barra_nav{
-background-color: #252424;
+background-color: #343434;
 height: 50px;
 width: 100%;
 }
@@ -16,7 +16,7 @@ width: 100%;
     margin:0;
 }
 #direc_inicio{
-    background-color: #252424;
+    background-color: #343434;
     color:#fff;
     text-decoration: none;
     display: block;
@@ -29,7 +29,7 @@ width: 100%;
     border: 1px solid black;
 }
 #direc_inicio_sesion{
-    background-color: #252424;
+    background-color: #343434;
     color:#fff;
     text-decoration: none;
     display: block;
@@ -82,6 +82,27 @@ margin-right: 10px;
     background-color:#fc5c34 ;
     color:#fdf5cf;
     border:none;
+}
+
+.select_provincia{
+    background-color:#fc5c34 ;
+    color:#fdf5cf;
+    border:none;
+    margin-top: 30px;
+    height: 30px;
+}
+.select_div{
+    margin-top: 30px;
+    
+}
+.select_localidad{
+    background-color:#fc5c34 ;
+    border:none;
+    color:#fdf5cf;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:15px;
+    max-width:200px;
+    height: 30px;
 }
 
 .boton_registrarse{
