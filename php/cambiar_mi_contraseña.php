@@ -2,10 +2,10 @@
 
 session_start();
 
-$numero=$_POST['numero'];
-$codigo=$_SESSION['codigo'];
-
-    if($numero==$codigo){
+    $numero=$_POST['numero'];
+    $codigo=$_SESSION['codigo'];
+    if(preg_match("/^[0-9]{6}$/",$numero) && preg_match("/^[0-9]{6}$/",$codigo)){
+        if($numero==$codigo){
 
 ?>
     <!DOCTYPE html>
@@ -30,7 +30,10 @@ $codigo=$_SESSION['codigo'];
 
 <?php
 
-    }else{
+            }else{
     
-}
+        }
+    }else{
+        echo "Las variables están vacías";
+    }
 ?>

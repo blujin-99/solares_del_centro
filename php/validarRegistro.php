@@ -10,6 +10,7 @@
 <body>
     
 <?php 
+
 $usuario=$_POST['usuario'];
 $nombre=$_POST['nombre'];
 $apellido=$_POST['apellido'];
@@ -17,14 +18,13 @@ $email=$_POST['email'];
 $protocolo=$_POST['protocolo'];
 $password=$_POST['contraseña'];
 $tel=$_POST['tel'];
-$provincia=$_POST['provincia'];
-$localidad=$_GET['localidad'];
 $correo=$email.$protocolo;
-    if( !preg_match("/^[a-zA-Zñ-Ñ0-9]{3,20}$/",$usuario) || !preg_match("/^[a-zA-Zñ-Ñ]{3,15}$/",$nombre) || !preg_match("/^[a-zA-Zñ-Ñ]{3,20}$/",$apellido) || !preg_match("/^[a-zA-Zñ-Ñ0-9.]{10,25}$/",$email) ||!preg_match("/^[a-zA-Zñ-Ñ0-9]{8,15}$/",$password) || !preg_match("/^[0-9]{10}$/",$tel)){
+    if( !preg_match("/^[a-zA-Zñ-Ñ0-9]{3,20}$/",$usuario) || !preg_match("/^[a-zA-Zñ-Ñ]{3,15}$/",$nombre) || !preg_match("/^[a-zA-Zñ-Ñ]{3,20}$/",$apellido) || !preg_match("/^[a-zA-Zñ-Ñ0-9.-_]{10,25}$/",$email) ||!preg_match("/^[a-zA-Zñ-Ñ0-9]{8,15}$/",$password) || !preg_match("/^[0-9]{10}$/",$tel)){
         header('location:error_no_registrado.php');
         exit;
-    }else{
+        }else{
             include('coneccion.php');
+            $id_localidad=$_POST['cbx_localidad'];
             $consultaUsuarios="SELECT * FROM `usuarios`";
             $query=mysqli_query($conect,$consultaUsuarios);
             while($usuarios=mysqli_fetch_array($query)){
@@ -47,7 +47,7 @@ $correo=$email.$protocolo;
                 }
             }
         $contrasenaEncriptada= password_hash($password,PASSWORD_DEFAULT,array("cost"=>12));
-        $registrarUsuario= "INSERT INTO `usuarios`( `nombre_usuario`, `contraseña`, `nivel_rango`, `nombre`, `apellido`, `telefono`, `id_localidad`, `user_email`) VALUES ('$usuario','$contrasenaEncriptada','2','$nombre','$apellido','$tel','25','$correo') ";
+        $registrarUsuario= "INSERT INTO `usuarios`( `nombre_usuario`, `contraseña`, `nivel_rango`, `nombre`, `apellido`, `telefono`, `id_localidad`, `user_email`) VALUES ('$usuario','$contrasenaEncriptada','2','$nombre','$apellido','$tel','$id_localidad','$correo') ";
         if($queryRegistrar=mysqli_query($conect,$registrarUsuario)){
             echo "TE HAS REGISTRADO CORRECTAMENTE!";
 
@@ -57,7 +57,8 @@ $correo=$email.$protocolo;
     }
 
 
+
+
 ?>
-<div id="insertar"></div>
 </body>
 </html>

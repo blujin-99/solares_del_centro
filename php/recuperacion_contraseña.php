@@ -53,6 +53,7 @@
                 $mail->isHTML(true);
                 $mail->Subject = $subject; 
                 $mail->Body = $bodyemail;
+                $mail->CharSet='UTF-8';
 
         if(!$mail->send()){
             echo "lo sentimos, el mensaje no se ha enviado";
@@ -60,24 +61,26 @@
             session_start();
             $_SESSION['codigo']=$codigoAcceso;
             $_SESSION['email']=$correo;
-            ?>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <main>
-                <form action="cambiar_mi_contraseña.php" method="POST">
-                    <input type="number" name="numero" placeholder="Código">
-                    <button type="submit">Siguiente</button>
-                </form>
-            </main>
-        </body>
-        </html>
+        
+        ?>
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
+            <body>
+                <main>
+                    <form action="cambiar_mi_contraseña.php" method="POST">
+                        <input type="number" name="numero" placeholder="Código">
+                        <button type="submit">Siguiente</button>
+                    </form>
+                </main>
+            </body>
+            </html>
 
         <?php
         }

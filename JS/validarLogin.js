@@ -2,7 +2,7 @@
     let email, contraseña,expresion,expresion2;
     email=document.getElementById('emaiil').value;
     contraseña=document.getElementById('contraseña').value;
-    expresion2= new RegExp("^[a-zA-Z0-9-@.]+$");
+    expresion2= new RegExp("^[a-zA-Z0-9-@.-_]+$");
     expresion= new RegExp("^[a-zA-Z0-9-ñ]+$");
     if(!expresion2.test(email)){
         alert("el correo ingresado es incorrecto");

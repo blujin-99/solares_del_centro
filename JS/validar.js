@@ -7,7 +7,7 @@
     email=document.getElementById('email').value;
     contraseña=document.getElementById('contraseña').value;
     tel=document.getElementById('tel').value;
-    expresion= new RegExp("^[a-zA-Z0-9ñÑ.]+$");
+    expresion= new RegExp("^[a-zA-Z0-9ñÑ._-]+$");
     exp2= new RegExp("^[a-zA-ZñÑ]+$");
         if(nombre === "" || apellido ==="" || usuario==="" || email==="" || contraseña==="" || tel==="" ){
                 alert("Debes completar todos los campos");
