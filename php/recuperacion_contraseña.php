@@ -71,11 +71,12 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
+                <script src="../JS/validarFormR_contraseña.js"></script>
             </head>
             <body>
                 <main>
-                    <form action="cambiar_mi_contraseña.php" method="POST">
-                        <input type="number" name="numero" placeholder="Código">
+                    <form action="cambiar_mi_contraseña.php" method="POST" onsubmit="return myCodigo();">
+                        <input type="text" name="numero" id="numero" placeholder="Código">
                         <button type="submit">Siguiente</button>
                     </form>
                 </main>
