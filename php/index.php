@@ -27,7 +27,8 @@
                     <p id="recuperacion_contraseña">¿olvidates tu contraseña?<a href="recuperar_mi_contraseña.php">Recuperar contraseña</a></p>
                     <button id="boton_inicio" type="submit">Iniciar</button>
                     <p id="textoregistrarme">¿No tienes una cuenta?<a href="registro.php">Registrate</a></p>
-                </form>
+                </form> 
             </main>
+            
         </body>
     </html>

@@ -76,7 +76,7 @@
             <body>
                 <main>
                     <form action="cambiar_mi_contraseña.php" method="POST" onsubmit="return myCodigo();">
-                        <input type="text" name="numero" id="numero" placeholder="Código">
+                        <input type="number" name="numero" id="numero" placeholder="Código">
                         <button type="submit">Siguiente</button>
                     </form>
                 </main>
